@@ -1,0 +1,7 @@
+//---------
+// PATTERNS
+//=========
+
+//	The Patterns folder represents a collection of granular partials that are responsible for abstracting repeatable patterns.  A Pattern is largely non-presentational.  A Pattern class should never be applied to an HTML element directly; instead, it should be extended into the Module elements (which *are* used in HTML.)
+
+//	Patterns are to be written using placeholders and classes, and extended into a Module or Template.

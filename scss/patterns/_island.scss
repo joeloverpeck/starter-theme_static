@@ -1,0 +1,29 @@
+//-------------------------------------------------------
+// ISLAND OBJECT
+//=======
+//  - Simple, boxed off content, as per: csswizardry.com/2011/10/the-island-//   object
+//-------------------------------------------------------
+
+ // <div class=island>
+ //     I am boxed off.
+ // </div>
+
+%island-base {
+    display:block;
+    @include clearfix;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+}
+
+%island {
+    padding:$trip-spacing-unit;
+    @extend %island-base;
+}
+
+%islet {
+    padding:$base-spacing-unit;
+    @extend %island-base;
+}
+

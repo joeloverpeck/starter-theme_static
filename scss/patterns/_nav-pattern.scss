@@ -1,0 +1,93 @@
+/* Nav */
+
+// <nav class="nav">
+//     <a href=#>Home</a>
+//     <a href=#>About</a>
+//     <a href=#>Portfolio</a>
+//     <a href=#>Contact</a>
+// </nav>
+
+// Root Nav Abstraction
+//---------------------
+%nav {
+
+    > a{
+        margin-left:0;
+        //text-decoration: none;
+        display:inline-block;
+       *display:inline;
+        zoom:1;
+    }
+    
+}
+
+  
+// Vertical Extension
+//-------------------
+%nav--stacked {
+	
+    > a{
+        display:block;
+    }
+    list-style: none;
+}
+
+
+// Centers the List
+//-----------------
+%nav--banner {
+	
+    text-align: center;
+    @extend %nav;
+}
+
+
+// Give links a larger hit area.  Will need whitespace.
+//-----------------------------------------------------
+%nav--block {
+    line-height:1;
+        
+    > a{
+        padding:$half-spacing-unit;
+    }
+    @extend %nav;  
+}
+
+
+
+// Force nav to occupy 100% of parent width.
+//--------------------------------------------
+
+%nav--fit {
+    display:table;
+    width:100%;
+        
+    > span {
+        display:table-cell;
+        > a {
+            display:block;
+        }
+    }
+    @extend %nav;
+    
+}
+
+%nav--breadcrumbs {
+    
+}
+
+
+// Makes comma delimited list
+%nav--keywords {
+    
+    > li{
+        
+        &:after{
+            content:", ";
+        }
+         
+        &:last-child:after{
+            display:none;
+        }
+    }
+}

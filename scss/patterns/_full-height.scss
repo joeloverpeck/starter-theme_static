@@ -1,0 +1,37 @@
+//-------------------------------------------------------
+// FULL HEIGHT
+//=======
+//  - pattern that pushes page to 100% height
+//--------------------------------------------------------
+
+// $footer-height: negative margin (eg, -100px)
+// This will offset the bottom of the page with a negative margin so the footer will fit within the page, instead of getting pushed down.
+
+// $wrapper-name: name of the main body wrapper.
+
+// Example Markup:
+// 	<html>
+// 		<body>
+// 			<div class="wrapper">
+//				<p>Main Content Here</p>
+// 			</div>
+//			<footer> Footer Here </footer>
+//		</body>
+//	</html>
+
+// Example Reference: @include full-height(".l-container", 90px);
+
+@mixin full-height($wrapper-name, $footer-height) {
+
+	html,
+	body {
+		height: 100%;
+	}
+
+	#{$wrapper-name} {
+		margin-bottom: -$footer-height; //negative height of footer
+		min-height: 100%;
+		//position: relative;
+	}
+
+}

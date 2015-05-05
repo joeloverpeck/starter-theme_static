@@ -1,0 +1,32 @@
+//-------------------------------------------------------
+// INPUT
+//===========
+// 	- Module for inputs
+//--------------------------------------------------------
+
+/* Input */
+
+
+%placeholder {
+   	color: lighten($type-light, 38%);
+   	font-size: 18px;
+}
+
+
+// PLACEHOLDER
+// ----------------------------------------
+::-webkit-input-placeholder {
+	@extend %placeholder;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $placeholder-color;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $placeholder-color;
+}
+
+:-ms-input-placeholder {
+  color: $placeholder-color;
+}

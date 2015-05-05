@@ -1,0 +1,59 @@
+
+Joel Overpeck
+2334 Graysford Drive                phone:          email:
+Indianapolis, IN 46234              (317) 354-5948      joel.overpeck@gmail.com
+
+
+Objective
+To obtain a position that enables me to utilize my interface design and development skills to create exceptional web products.
+
+Technical Expertise
+HTML5           CSS3            SASS / LESS     JavaScript
+jQuery / jQuery UI      Kendo UI            AngularJS       Bootstrap
+Responsive Web Design   Adobe Creative Suite        Wordpress API       Balsamiq
+Git         XML / XSLT
+Experience
+My background in front-end design and development consists of working both as a full time employee in an application development environment as well as an independent consultant.
+
+Early in my career, my work was centered around Geographic Information Systems (GIS) in which I focused on small projects involving object oriented programming. I subsequently moved into developing web applications, which including front-end UI development.
+
+From there, my interests rapidly shifted to web and interface design, with a focus on type-driven design and end-to-end user experience. My work draws heavily from industry best practices and methodologies, including responsive design, progressive enhancement, accessibility, page-speed optimization, and rigorous user-agent testing.
+
+Utilizing agile-driven methodologies, I have substantial experience in all aspects of front-end design, including requirements definition, wireframing, rapid prototyping, and functional testing. I work closely with stakeholders and team members to deliver user interfaces that are functionally robust, intuitive, and aesthetically pleasing.
+
+Employment History
+Indiana Interactive
+Indianapolis, IN (2012 - Present)           Role: UI Designer / Developer
+
+As a UI developer, I implement web applications for various Indiana state agencies, under the IN.gov umbrella. My responsibilities include working with state agencies to define features and translate them into fully realized user interfaces utilizing HTML5, CSS3, JavaScript, and JavaScript frameworks.
+In an effort to streamline front-end development, I implemented a UI framework that applies object-oriented CSS principals using SASS and Compass.  In establishing the framework, I helped establish front-end CSS standards for all web applications.
+
+Veolia Water
+Indianapolis, IN (2011)             Role: GIS Specialist
+
+As Veolia employees made the transition to an enterprise GIS, I advised, trained, and mentored them in ESRI ArcGIS Enterprise software procedures and best practices.
+
+Using Adobe Flex Viewer and ArcGIS Server, I established and configured Veolia's ArcGIS Flex Viewer, enabling employees to access infrastructure data in the field.
+
+Independent Web Design Consultant
+Indianapolis, IN (2010 - Present)           Role: Web Designer
+
+I have broad experience in the planning, design, and development of websites for clients using Adobe Creative Suite and a variety of web languages, including CSS3, PHP, JavaScript and jQuery.
+
+I utilize SEO best practices to organically enhance site searchability and semantic HTML5 for accessibility optimization (WAI-ARIA). I also have experience using the Wordpress content management system to develop custom post types via PHP and the Wordpress.
+
+Woolpert
+Indianapolis, IN (2007 - 2010)              Role: Developer
+                          (2007 - 2009)     Role: Technology Advisor
+                          (2003 - 2006)     Role: GIS Analyst
+
+As a developer, I was responsible for building geospatial applications using VB.NET, ASP.NET, AJAX, and JavaScript.  Examples of my work include a web service that executed geoprocessing tasks, such as geolocation and proximity analysis based of off user-defined areas and a Property Assessment Viewer for the City of Indianapolis, which enabled end-users to locate property parcels and view associated property tax information.
+
+Education
+
+Master of Arts, Geography (2003)
+(emphasis in Geographic Information Systems)
+Indiana State University
+
+Bachelor of Science, Geography / Conservation (2000)
+Indiana State University

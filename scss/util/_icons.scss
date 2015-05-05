@@ -1,0 +1,52 @@
+@import "font-awesome";     		
+
+.icon-warning-sign:before {
+	@extend %icon-warning-sign;	
+	margin-right: 6px;
+}
+
+.icon-th:before {
+	@extend %icon-th;		
+}
+
+.icon-remove:before {
+	@extend %icon-remove;		
+}
+
+.icon-chevron-up:before {
+	@extend %icon-chevron-up;		
+}
+
+.icon-arrow-left:before {
+	@extend %icon-arrow-left;
+}
+
+.icon-undo:before {
+	@extend %icon-undo;
+}
+
+.icon-lock:before {
+	@extend %icon-lock;
+}
+
+.icon-ok-sign:before {
+	@extend %icon-ok-sign;
+}
+
+// kendo specific
+.k-tooltip-validation:before {
+	margin-right: .4em;
+	font-family: FontAwesome;
+	@extend %icon-warning-sign;
+}
+
+.icon-plus-sign-alt:before{
+	@extend %icon-plus-sign-alt;
+}
+
+
+
+#col2 .icon-remove-sign:before {
+	@extend %icon-remove-sign;	
+	//margin-right: 6px;
+}

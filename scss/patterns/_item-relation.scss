@@ -1,0 +1,62 @@
+//-------------------------------------------------------
+// ITEM RELATION
+//=======
+//  - Description / Title placement.
+//	- Use with labels, definitions, icons, etc. 
+//-------------------------------------------------------
+
+// Used for label:input or definition:term placement;
+// Might be able to replace split (or implement it as a submodule here)
+// maybe replace icon-font placement?
+
+   // <dl class=split>       
+   //     <dt class=split__title>Burger and fries</dt>
+   //     <dd>&pound;5.99</dd>       
+   //     <dt class=split__title>Fillet steak</dt>
+   //     <dd>&pound;19.99</dd>       
+   //     <dt class=split__title>Ice cream</dt>
+   //     <dd>&pound;2.99</dd>       
+   // </dl>
+ 
+
+@mixin item-relation($list-style: "stacked", $distance: $eigth-spacing-unit) {
+   
+
+   @if $list-style == "split" {
+
+      @extend %clearfix;
+      @extend %title__split;
+      margin-right: $distance;
+   }
+
+   @if $list-style == "split-many" {
+      
+      & dt {
+         @extend %ib;
+         margin-right: $distance;
+      }
+      & dd {
+         @extend %ib;
+         margin-left: 0;
+         margin-right: $distance;
+      }
+   }
+
+   @else {
+      @extend %title__stacked;
+      margin-bottom: $distance;  
+   }
+}
+
+
+%title__split {
+	    text-align:left;
+	    float:left;
+}
+
+%title__stacked {
+		display: block;
+}
+
+
+

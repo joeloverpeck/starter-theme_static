@@ -1,0 +1,32 @@
+//-------------------------------------------------------
+// CIRCLE-TEXT
+//=======
+// Mixin to place text inside circle.
+//--------------------------------------------------------
+
+
+@mixin circle-text($size, $circle-color, $line-height) {
+    @extend %circle;
+    line-height: $line-height;
+    width: $size + px;
+    height: $size + px;
+    background: $circle-color;
+}
+
+%circle {
+    //line-height: 1.8;
+    //vertical-align: center;
+    //float: right;
+    font-size: 12px;
+    position: relative;
+    //font-weight: 400;
+    font-style: normal;
+    color: #fff;    
+    // width: 20px;
+    // height: 20px;
+    display: block;
+    text-align: center;
+    @include border-radius(999px); 
+    //behavior: url(PIE.htc); /* for legacy IE - use absolute path */
+}
+

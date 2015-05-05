@@ -1,0 +1,463 @@
+//-------------------------------------------------------
+// FONT AWESOME STYLES
+//=======
+//  
+//--------------------------------------------------------
+
+/* Font Awesome */
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+ * readers do not read off random characters that represent icons */
+
+
+// FONT AWESOME MIXINS
+// --------------------------
+@mixin icon($icon) {
+  @include icon-FontAwesome();
+  content: $icon;
+}
+
+@mixin icon-FontAwesome() {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em; // fixes ie7 issues
+}
+
+@mixin icon-stack($width: 2em, $height: 2em, $top-font-size: 1em, $base-font-size: 2em) {
+  .icon-stack {
+    position: relative;
+    display: inline-block;
+    width: $width;
+    height: $height;
+    line-height: $width;
+    vertical-align: -35%;
+    [class^="icon-"],
+    [class*=" icon-"] {
+      display: block;
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      font-size: $top-font-size;
+      line-height: inherit;
+      *line-height: $height;
+    }
+    .icon-stack-base {
+      font-size: $base-font-size;
+      *line-height: #{$height / $base-font-size}em;
+    }
+  }
+}
+
+// CORE STYLE
+// ----------------------------------------
+[class^="icon-"],
+[class*=" icon-"] {
+  @include icon-FontAwesome();
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+  vertical-align: -10%;
+  font-size: (4em/3);
+}
+
+/* makes sure icons active on rollover in links */
+a {
+  [class^="icon-"],
+  [class*=" icon-"] {
+    display: inline;
+  }
+}
+
+// ICON PLACEHOLDERS
+// ( See config for unicode variables ) 
+// ----------------------------------------
+%icon-glass                   { content: $glass; }
+%icon-music                   { content: $music; }
+%icon-search                  { content: $search; }
+%icon-envelope-alt            { content: $envelope-alt; }
+%icon-heart                   { content: $heart; }
+%icon-star                    { content: $star; }
+%icon-star-empty              { content: $star-empty; }
+%icon-user                    { content: $user; }
+%icon-film                    { content: $film; }
+%icon-th-large                { content: $th-large; }
+%icon-th                      { content: $th; }
+%icon-th-list                 { content: $th-list; }
+%icon-ok                      { content: $ok; }
+%icon-remove                  { content: $remove; }
+%icon-zoom-in                 { content: $zoom-in; }
+%icon-zoom-out                { content: $zoom-out; }
+%icon-power-off,
+%icon-off                     { content: $off; }
+%icon-signal                  { content: $signal; }
+%icon-gear,
+%icon-cog                     { content: $cog; }
+%icon-trash                   { content: $trash; }
+%icon-home                    { content: $home; }
+%icon-file-alt                { content: $file-alt; }
+%icon-time                    { content: $time; }
+%icon-road                    { content: $road; }
+%icon-download-alt            { content: $download-alt; }
+%icon-download                { content: $download; }
+%icon-upload                  { content: $upload; }
+%icon-inbox                   { content: $inbox; }
+%icon-play-circle             { content: $play-circle; }
+%icon-rotate-right,
+%icon-repeat                  { content: $repeat; }
+%icon-refresh                 { content: $refresh; }
+%icon-list-alt                { content: $list-alt; }
+%icon-lock                    { content: $lock; }
+%icon-flag                    { content: $flag; }
+%icon-headphones              { content: $headphones; }
+%icon-volume-off              { content: $volume-off; }
+%icon-volume-down             { content: $volume-down; }
+%icon-volume-up               { content: $volume-up; }
+%icon-qrcode                  { content: $qrcode; }
+%icon-barcode                 { content: $barcode; }
+%icon-tag                     { content: $tag; }
+%icon-tags                    { content: $tags; }
+%icon-book                    { content: $book; }
+%icon-bookmark                { content: $bookmark; }
+%icon-print                   { content: $print; }
+%icon-camera                  { content: $camera; }
+%icon-font                    { content: $font; }
+%icon-bold                    { content: $bold; }
+%icon-italic                  { content: $italic; }
+%icon-text-height             { content: $text-height; }
+%icon-text-width              { content: $text-width; }
+%icon-align-left              { content: $align-left; }
+%icon-align-center            { content: $align-center; }
+%icon-align-right             { content: $align-right; }
+%icon-align-justify           { content: $align-justify; }
+%icon-list                    { content: $list; }
+%icon-indent-left             { content: $indent-left; }
+%icon-indent-right            { content: $indent-right; }
+%icon-facetime-video          { content: $facetime-video; }
+%icon-picture                 { content: $picture; }
+%icon-pencil                  { content: $pencil; }
+%icon-map-marker              { content: $map-marker; }
+%icon-adjust                  { content: $adjust; }
+%icon-tint                    { content: $tint; }
+%icon-edit                    { content: $edit; }
+%icon-share                   { content: $share; }
+%icon-check                   { content: $check; }
+%icon-move                    { content: $move; }
+%icon-step-backward           { content: $step-backward; }
+%icon-fast-backward           { content: $fast-backward; }
+%icon-backward                { content: $backward; }
+%icon-play                    { content: $play; }
+%icon-pause                   { content: $pause; }
+%icon-stop                    { content: $stop; }
+%icon-forward                 { content: $forward; }
+%icon-fast-forward            { content: $fast-forward; }
+%icon-step-forward            { content: $step-forward; }
+%icon-eject                   { content: $eject; }
+%icon-chevron-left            { content: $chevron-left; }
+%icon-chevron-right           { content: $chevron-right; }
+%icon-plus-sign               { content: $plus-sign; }
+%icon-minus-sign              { content: $minus-sign; }
+%icon-remove-sign             { content: $remove-sign; }
+%icon-ok-sign                 { content: $ok-sign; }
+%icon-question-sign           { content: $question-sign; }
+%icon-info-sign               { content: $info-sign; }
+%icon-screenshot              { content: $screenshot; }
+%icon-remove-circle           { content: $remove-circle; }
+%icon-ok-circle               { content: $ok-circle; }
+%icon-ban-circle              { content: $ban-circle; }
+%icon-arrow-left              { content: $arrow-left; }
+%icon-arrow-right             { content: $arrow-right; }
+%icon-arrow-up                { content: $arrow-up; }
+%icon-arrow-down              { content: $arrow-down; }
+%icon-mail-forward,
+%icon-share-alt               { content: $share-alt; }
+%icon-resize-full             { content: $resize-full; }
+%icon-resize-small            { content: $resize-small; }
+%icon-plus                    { content: $plus; }
+%icon-minus                   { content: $minus; }
+%icon-asterisk                { content: $asterisk; }
+%icon-exclamation-sign        { content: $exclamation-sign; }
+%icon-gift                    { content: $gift; }
+%icon-leaf                    { content: $leaf; }
+%icon-fire                    { content: $fire; }
+%icon-eye-open                { content: $eye-open; }
+%icon-eye-close               { content: $eye-close; }
+%icon-warning-sign            { content: $warning-sign; }
+%icon-plane                   { content: $plane; }
+%icon-calendar                { content: $calendar; }
+%icon-random                  { content: $random; }
+%icon-comment                 { content: $comment; }
+%icon-magnet                  { content: $magnet; }
+%icon-chevron-up              { content: $chevron-up; }
+%icon-chevron-down            { content: $chevron-down; }
+%icon-retweet                 { content: $retweet; }
+%icon-shopping-cart           { content: $shopping-cart; }
+%icon-folder-close            { content: $folder-close; }
+%icon-folder-open             { content: $folder-open; }
+%icon-resize-vertical         { content: $resize-vertical; }
+%icon-resize-horizontal       { content: $resize-horizontal; }
+%icon-bar-chart               { content: $bar-chart; }
+%icon-twitter-sign            { content: $twitter-sign; }
+%icon-facebook-sign           { content: $facebook-sign; }
+%icon-camera-retro            { content: $camera-retro; }
+%icon-key                     { content: $key; }
+%icon-gears,
+%icon-cogs                    { content: $cogs; }
+%icon-comments                { content: $comments; }
+%icon-thumbs-up-alt           { content: $thumbs-up-alt; }
+%icon-thumbs-down-alt         { content: $thumbs-down-alt; }
+%icon-star-half               { content: $star-half; }
+%icon-heart-empty             { content: $heart-empty; }
+%icon-signout                 { content: $signout; }
+%icon-linkedin-sign           { content: $linkedin-sign; }
+%icon-pushpin                 { content: $pushpin; }
+%icon-external-link           { content: $external-link; }
+%icon-signin                  { content: $signin; }
+%icon-trophy                  { content: $trophy; }
+%icon-github-sign             { content: $github-sign; }
+%icon-upload-alt              { content: $upload-alt; }
+%icon-lemon                   { content: $lemon; }
+%icon-phone                   { content: $phone; }
+%icon-unchecked,
+%icon-check-empty             { content: $check-empty; }
+%icon-bookmark-empty          { content: $bookmark-empty; }
+%icon-phone-sign              { content: $phone-sign; }
+%icon-twitter                 { content: $twitter; }
+%icon-facebook                { content: $facebook; }
+%icon-github                  { content: $github; }
+%icon-unlock                  { content: $unlock; }
+%icon-credit-card             { content: $credit-card; }
+%icon-rss                     { content: $rss; }
+%icon-hdd                     { content: $hdd; }
+%icon-bullhorn                { content: $bullhorn; }
+%icon-bell                    { content: $bell; }
+%icon-certificate             { content: $certificate; }
+%icon-hand-right              { content: $hand-right; }
+%icon-hand-left               { content: $hand-left; }
+%icon-hand-up                 { content: $hand-up; }
+%icon-hand-down               { content: $hand-down; }
+%icon-circle-arrow-left       { content: $circle-arrow-left; }
+%icon-circle-arrow-right      { content: $circle-arrow-right; }
+%icon-circle-arrow-up         { content: $circle-arrow-up; }
+%icon-circle-arrow-down       { content: $circle-arrow-down; }
+%icon-globe                   { content: $globe; }
+%icon-wrench                  { content: $wrench; }
+%icon-tasks                   { content: $tasks; }
+%icon-filter                  { content: $filter; }
+%icon-briefcase               { content: $briefcase; }
+%icon-fullscreen              { content: $fullscreen; }
+%icon-group                   { content: $group; }
+%icon-link                    { content: $link; }
+%icon-cloud                   { content: $cloud; }
+%icon-beaker                  { content: $beaker; }
+%icon-cut                     { content: $cut; }
+%icon-copy                    { content: $copy; }
+%icon-paperclip,
+%icon-paper-clip              { content: $paper-clip; }
+%icon-save                    { content: $save; }
+%icon-sign-blank              { content: $sign-blank; }
+%icon-reorder                 { content: $reorder; }
+%icon-list-ul                 { content: $list-ul; }
+%icon-list-ol                 { content: $list-ol; }
+%icon-strikethrough           { content: $strikethrough; }
+%icon-underline               { content: $underline; }
+%icon-table                   { content: $table; }
+%icon-magic                   { content: $magic; }
+%icon-truck                   { content: $truck; }
+%icon-pinterest               { content: $pinterest; }
+%icon-pinterest-sign          { content: $pinterest-sign; }
+%icon-google-plus-sign        { content: $google-plus-sign; }
+%icon-google-plus             { content: $google-plus; }
+%icon-money                   { content: $money; }
+%icon-caret-down              { content: $caret-down; }
+%icon-caret-up                { content: $caret-up; }
+%icon-caret-left              { content: $caret-left; }
+%icon-caret-right             { content: $caret-right; }
+%icon-columns                 { content: $columns; }
+%icon-sort                    { content: $sort; }
+%icon-sort-down               { content: $sort-down; }
+%icon-sort-up                 { content: $sort-up; }
+%icon-envelope                { content: $envelope; }
+%icon-linkedin                { content: $linkedin; }
+%icon-rotate-left,
+%icon-undo                    { content: $undo; }
+%icon-legal                   { content: $legal; }
+%icon-dashboard               { content: $dashboard; }
+%icon-comment-alt             { content: $comment-alt; }
+%icon-comments-alt            { content: $comments-alt; }
+%icon-bolt                    { content: $bolt; }
+%icon-sitemap                 { content: $sitemap; }
+%icon-umbrella                { content: $umbrella; }
+%icon-paste                   { content: $paste; }
+%icon-lightbulb               { content: $lightbulb; }
+%icon-exchange                { content: $exchange; }
+%icon-cloud-download          { content: $cloud-download; }
+%icon-cloud-upload            { content: $cloud-upload; }
+%icon-user-md                 { content: $user-md; }
+%icon-stethoscope             { content: $stethoscope; }
+%icon-suitcase                { content: $suitcase; }
+%icon-bell-alt                { content: $bell-alt; }
+%icon-coffee                  { content: $coffee; }
+%icon-food                    { content: $food; }
+%icon-file-text-alt           { content: $file-text-alt; }
+%icon-building                { content: $building; }
+%icon-hospital                { content: $hospital; }
+%icon-ambulance               { content: $ambulance; }
+%icon-medkit                  { content: $medkit; }
+%icon-fighter-jet             { content: $fighter-jet; }
+%icon-beer                    { content: $beer; }
+%icon-h-sign                  { content: $h-sign; }
+%icon-plus-sign-alt           { content: $plus-sign-alt; }
+%icon-double-angle-left       { content: $double-angle-left; }
+%icon-double-angle-right      { content: $double-angle-right; }
+%icon-double-angle-up         { content: $double-angle-up; }
+%icon-double-angle-down       { content: $double-angle-down; }
+%icon-angle-left              { content: $angle-left; }
+%icon-angle-right             { content: $angle-right; }
+%icon-angle-up                { content: $angle-up; }
+%icon-angle-down              { content: $angle-down; }
+%icon-desktop                 { content: $desktop; }
+%icon-laptop                  { content: $laptop; }
+%icon-tablet                  { content: $tablet; }
+%icon-mobile-phone            { content: $mobile-phone; }
+%icon-circle-blank            { content: $circle-blank; }
+%icon-quote-left              { content: $quote-left; }
+%icon-quote-right             { content: $quote-right; }
+%icon-spinner                 { content: $spinner; }
+%icon-circle                  { content: $circle; }
+%icon-mail-reply,
+%icon-reply                   { content: $reply; }
+%icon-github-alt              { content: $github-alt; }
+%icon-folder-close-alt        { content: $folder-close-alt; }
+%icon-folder-open-alt         { content: $folder-open-alt; }
+%icon-expand-alt              { content: $expand-alt; }
+%icon-collapse-alt            { content: $collapse-alt; }
+%icon-smile                   { content: $smile; }
+%icon-frown                   { content: $frown; }
+%icon-meh                     { content: $meh; }
+%icon-gamepad                 { content: $gamepad; }
+%icon-keyboard                { content: $keyboard; }
+%icon-flag-alt                { content: $flag-alt; }
+%icon-flag-checkered          { content: $flag-checkered; }
+%icon-terminal                { content: $terminal; }
+%icon-code                    { content: $code; }
+%icon-reply-all               { content: $reply-all; }
+%icon-mail-reply-all          { content: $mail-reply-all; }
+%icon-star-half-full,
+%icon-star-half-empty         { content: $star-half-empty; }
+%icon-location-arrow          { content: $location-arrow; }
+%icon-crop                    { content: $crop; }
+%icon-code-fork               { content: $code-fork; }
+%icon-unlink                  { content: $unlink; }
+%icon-question                { content: $question; }
+%icon-info                    { content: $info; }
+%icon-exclamation             { content: $exclamation; }
+%icon-superscript             { content: $superscript; }
+%icon-subscript               { content: $subscript; }
+%icon-eraser                  { content: $eraser; }
+%icon-puzzle-piece            { content: $puzzle-piece; }
+%icon-microphone              { content: $microphone; }
+%icon-microphone-off          { content: $microphone-off; }
+%icon-shield                  { content: $shield; }
+%icon-calendar-empty          { content: $calendar-empty; }
+%icon-fire-extinguisher       { content: $fire-extinguisher; }
+%icon-rocket                  { content: $rocket; }
+%icon-maxcdn                  { content: $maxcdn; }
+%icon-chevron-sign-left       { content: $chevron-sign-left; }
+%icon-chevron-sign-right      { content: $chevron-sign-right; }
+%icon-chevron-sign-up         { content: $chevron-sign-up; }
+%icon-chevron-sign-down       { content: $chevron-sign-down; }
+%icon-html5                   { content: $html5; }
+%icon-css3                    { content: $css3; }
+%icon-anchor                  { content: $anchor; }
+%icon-unlock-alt              { content: $unlock-alt; }
+%icon-bullseye                { content: $bullseye; }
+%icon-ellipsis-horizontal     { content: $ellipsis-horizontal; }
+%icon-ellipsis-vertical       { content: $ellipsis-vertical; }
+%icon-rss-sign                { content: $rss-sign; }
+%icon-play-sign               { content: $play-sign; }
+%icon-ticket                  { content: $ticket; }
+%icon-minus-sign-alt          { content: $minus-sign-alt; }
+%icon-check-minus             { content: $check-minus; }
+%icon-level-up                { content: $level-up; }
+%icon-level-down              { content: $level-down; }
+%icon-check-sign              { content: $check-sign; }
+%icon-edit-sign               { content: $edit-sign; }
+%icon-external-link-sign      { content: $external-link-sign; }
+%icon-share-sign              { content: $share-sign; }
+%icon-compass                 { content: $compass; }
+%icon-collapse                { content: $collapse; }
+%icon-collapse-top            { content: $collapse-top; }
+%icon-expand                  { content: $expand; }
+%icon-euro,
+%icon-eur                     { content: $eur; }
+%icon-gbp                     { content: $gbp; }
+%icon-dollar,
+%icon-usd                     { content: $usd; }
+%icon-rupee,
+%icon-inr                     { content: $inr; }
+%icon-yen,
+%icon-jpy                     { content: $jpy; }
+%icon-renminbi,
+%icon-cny                     { content: $cny; }
+%icon-won,
+%icon-krw                     { content: $krw; }
+%icon-bitcoin,
+%icon-btc                     { content: $btc; }
+%icon-file                    { content: $file; }
+%icon-file-text               { content: $file-text; }
+%icon-sort-by-alphabet        { content: $sort-by-alphabet; }
+%icon-sort-by-alphabet-alt    { content: $sort-by-alphabet-alt; }
+%icon-sort-by-attributes      { content: $sort-by-attributes; }
+%icon-sort-by-attributes-alt  { content: $sort-by-attributes-alt; }
+%icon-sort-by-order           { content: $sort-by-order; }
+%icon-sort-by-order-alt       { content: $sort-by-order-alt; }
+%icon-thumbs-up               { content: $thumbs-up; }
+%icon-thumbs-down             { content: $thumbs-down; }
+%icon-youtube-sign            { content: $youtube-sign; }
+%icon-youtube                 { content: $youtube; }
+%icon-xing                    { content: $xing; }
+%icon-xing-sign               { content: $xing-sign; }
+%icon-youtube-play            { content: $youtube-play; }
+%icon-dropbox                 { content: $dropbox; }
+%icon-stackexchange           { content: $stackexchange; }
+%icon-instagram               { content: $instagram; }
+%icon-flickr                  { content: $flickr; }
+%icon-adn                     { content: $adn; }
+%icon-bitbucket               { content: $bitbucket; }
+%icon-bitbucket-sign          { content: $bitbucket-sign; }
+%icon-tumblr                  { content: $tumblr; }
+%icon-tumblr-sign             { content: $tumblr-sign; }
+%icon-long-arrow-down         { content: $long-arrow-down; }
+%icon-long-arrow-up           { content: $long-arrow-up; }
+%icon-long-arrow-left         { content: $long-arrow-left; }
+%icon-long-arrow-right        { content: $long-arrow-right; }
+%icon-apple                   { content: $apple; }
+%icon-windows                 { content: $windows; }
+%icon-android                 { content: $android; }
+%icon-linux                   { content: $linux; }
+%icon-dribbble                { content: $dribbble; }
+%icon-skype                   { content: $skype; }
+%icon-foursquare              { content: $foursquare; }
+%icon-trello                  { content: $trello; }
+%icon-female                  { content: $female; }
+%icon-male                    { content: $male; }
+%icon-gittip                  { content: $gittip; }
+%icon-sun                     { content: $sun; }
+%icon-moon                    { content: $moon; }
+%icon-archive                 { content: $archive; }
+%icon-bug                     { content: $bug; }
+%icon-vk                      { content: $vk; }
+%icon-weibo                   { content: $weibo; }
+%icon-renren                  { content: $renren; }

@@ -1,0 +1,28 @@
+// DEF-LIST
+//=======
+// 	- Definition Lists
+//
+//	USAGE
+//-------
+//		- def-list() is the core mixin.
+//--------------------------------------------------------
+@import "patterns/item-relation";
+
+// Arguments:
+// 	1) Stacked - This is the default.  Can call like
+//	@include def-list;
+//	2) Split.
+@mixin def-list($list-style: "stacked", $distance: $base-spacing-unit) {
+
+	@if $list-style == "split" {
+
+		& > dt {
+			@extend %title__split;
+			margin-right: $distance;
+		}
+	}
+
+	// default value (no argument)
+
+	min-width: 14em;
+}

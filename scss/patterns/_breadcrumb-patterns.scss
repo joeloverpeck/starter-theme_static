@@ -1,0 +1,40 @@
+//-------------------------------------------------------
+// BREADCRUMB PATTERNS
+//=======
+// Mixin to place text inside circle.
+//--------------------------------------------------------
+
+//   <div class="nav  breadcrumb--path">
+//       <span class=breadcrumb__root><a href=#>inuit.css</a></span>
+//       <span><a href=#>inuit.css</a></span>
+//       <span><a href=#>partials</a></span>
+//       <span class=current><a href=#>objects</a></span>
+//   </div>
+  
+ 
+// .breadcrumb > span:before{
+//     content:"» ";
+// }
+
+// .breadcrumb--path > span:before{
+//     content:"/ ";
+// }
+
+//   <div class="nav  breadcrumb">
+//       <span><a href=#>Home</a></span>
+//       <span data-breadcrumb="|"><a href=#>About</a></span>
+//       <span data-breadcrumb="|"><a href=#>The Board</a></span>
+//       <span data-breadcrumb="|" class=current><a href=#>Directors</a></span>
+//   </div>
+
+// .breadcrumb > a[data-breadcrumb]:before{
+//     content:attr(data-breadcrumb)" ";
+// }
+
+
+/**
+ * Denote the root of the tree.
+ */
+// .breadcrumb__root{
+//     font-weight:bold;
+// }

@@ -1,0 +1,59 @@
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Starter Template SASS
+//--------------------------------------------------
+//
+//  Steps for Rapid Setup:
+//		1) Configure the Project Settings in: sass/util/_config.scss
+//
+// NOTES:
+//-------
+// 	On Sizing Units:
+//		- All fonts use rems (see font-size mixin).
+//		- Main grid elements use %'s.
+//		- Max width are implemented with ems.
+//		- Padding and Margin use ems.  See spacing variables in config.
+//  		- When using media queries, we should use standard ems. See:
+//		- http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/.
+//	@import order:  Be sure to include patterns, themes, and components before //	   modules
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//----------------------------------
+// PROJECT:
+// 	- Project Name
+//========================
+//  Project Settings:
+	@import "base/scaffolding";
+	@import "util/config";
+//========================
+
+	// Supporting Styles
+	//------------------------------
+	//@import "compass/css3"; 			// compass css3 mixins
+	//@import "util/normalize";				// style normalization
+	@import "util/helpers";					// helper rules
+	@import "util/font-face";				// font-face settings
+	@import "util/icons";
+
+
+	// Layout
+	//------------------------------
+	//@import "layout/grid";					// base grid
+	//@import "layout/layout";				// positioning of elements and grid application
+
+	// Base Styles
+	//------------------------------
+	//@import "patterns/island";
+	//@import "components/base";				// base styles for html & body
+	//@import "components/typography";		// general type styles
+	//@import "components/links";				// anchor styles
+	//@import "components/messaging";			// custom message styles
+	//@import "components/input"; 			// various input styles
+	//@import "components/labels";			// list and form labels
+	//@import "components/buttons";			// buttons rules
+
+	// Module Styles
+	//------------------------------
+
+
+	// Theme Styles
+	//------------------------------
